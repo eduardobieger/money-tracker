@@ -5,6 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "npx prettier --write .",
+    "dev-build": "tsc -p tsconfig.json -w",
+    "dev": "nodemon dist/server.js",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/server.js"
   },
@@ -21,16 +23,12 @@
     "@fastify/postgres": "^5.2.2",
     "dotenv": "^16.4.5",
     "fastify": "^4.28.1",
-    "knex": "^3.1.0",
-    "pg": "^8.12.0",
-    "pino-pretty": "^11.2.1"
+    "pino-pretty": "^11.2.2"
   },
   "devDependencies": {
-    "@types/knex": "^0.15.2",
-    "@types/node": "^20.14.10",
-    "@types/pg": "^8.11.6",
+    "@types/node": "^22.1.0",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.3",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   }
 }
