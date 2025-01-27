@@ -6,7 +6,7 @@ const WalletsRepository = {
       const { rows } = await fastify.pg.query(
         `
         SELECT * FROM wallets;
-        `
+        `,
       );
 
       return rows;
